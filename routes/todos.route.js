@@ -3,7 +3,7 @@ const {
     body
 } = require("express-validator");
 const router = express.Router();
-let {todos, todoLastId } = require("../../db");
+let {todos, todoLastId } = require("../db");
 
 const createTodoSchema = [
     body("title").isString().notEmpty(),

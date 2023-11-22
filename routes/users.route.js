@@ -1,7 +1,7 @@
 const express = require("express");
 const { body } = require("express-validator");
 const router = express.Router();
-let {users, userLastId } = require("../../db");
+let {users, userLastId } = require("../db");
 
 const createUserSchema = [
     body("firstName").isString().notEmpty().isLength({ min: 2, max: 60 }),
